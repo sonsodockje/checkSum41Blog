@@ -1,5 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex } from 'mdsvex';
+import { rehypeImagePrefix } from './src/lib/rehype-image-prefix.js';
+
+const base = process.env.BASE_PATH || '';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -8,9 +11,7 @@ const config = {
 	preprocess: [
 		mdsvex({
 			extensions: ['.md'],
-			components: {
-				img: './src/lib/components/Image.svelte'
-			}
+			rehypePlugins: [[rehypeImagePrefix, base]]
 		})
 	],
 
@@ -19,7 +20,7 @@ const config = {
 			fallback: '404.html'
 		}),
 		paths: {
-			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+			base: base
 		}
 	}
 };
