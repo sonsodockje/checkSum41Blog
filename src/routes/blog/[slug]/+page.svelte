@@ -65,5 +65,6 @@
 		max-width: 100%;
 		height: auto;
 		border-radius: 8px;
+		margin: 1rem auto 1rem auto;
 	}
 </style>
