@@ -1,4 +1,6 @@
 <script>
+	import { base } from '$app/paths';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
@@ -8,7 +10,7 @@
 </svelte:head>
 
 <div class="container">
-	<a href="/blog" class="back-link">&larr; Back to Blog</a>
+	<a href="{base}/blog" class="back-link">&larr; Back to Blog</a>
 	<h1>{data.title}</h1>
 	<p class="date">Published on {data.date}</p>
 

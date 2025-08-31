@@ -1,4 +1,6 @@
 <script>
+    import { base } from '$app/paths';
+
 	/** @type {import('./$types').PageData} */
 	export let data;
 </script>
@@ -13,7 +15,7 @@
 	<ul>
 		{#each data.posts as post}
 			<li>
-				<a href={`/blog/${post.path}`}>
+				<a href="{base}/blog/{post.path}">
 					<h2>{post.meta.title}</h2>
 					<p>{post.meta.date}</p>
 				</a>

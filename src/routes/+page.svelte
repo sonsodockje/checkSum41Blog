@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>Home</title>
 	<meta name="description" content="SvelteKit Blog" />
@@ -6,7 +10,7 @@
 <section>
 	<h1>Welcome to My Blog</h1>
 	<p>This is a simple blog built with SvelteKit.</p>
-	<a href="/blog" class="button">Go to Blog</a>
+	<a href="{base}/blog" class="button">Go to Blog</a>
 </section>
 
 <style>
