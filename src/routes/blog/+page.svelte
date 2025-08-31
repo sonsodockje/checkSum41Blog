@@ -9,57 +9,20 @@
 	<title>Blog</title>
 </svelte:head>
 
-<div class="container">
-	<!-- <h1>Blog</h1> -->
+<div class="mx-auto w-xl px-4 py-8">
+	<h1 class="mb-10 text-center text-4xl font-extrabold">LIST</h1>
 
-	<ul>
+	<ul class="space-y-4">
 		{#each data.posts as post}
-			<li>
-				<a href="{base}/blog/{post.path}">
-					<h2>{post.meta.title}</h2>
-					<p>{post.meta.date}</p>
+			<li class="w-full">
+				<a
+					href="{base}/blog/{post.path}"
+					class="flex flex-col rounded-lg border border-gray-200 p-4 transition-colors hover:bg-gray-50"
+				>
+					<h2 class="">{post.meta.title}</h2>
+					<p class="">{post.meta.date}</p>
 				</a>
 			</li>
 		{/each}
 	</ul>
 </div>
-
-<style>
-	.container {
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 2rem;
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-	}
-
-	li {
-		margin-bottom: 1.5rem;
-	}
-
-	a {
-		text-decoration: none;
-		color: inherit;
-		border: 1px solid #ccc;
-		padding: 1rem;
-		display: block;
-		border-radius: 8px;
-		transition: background-color 0.2s;
-	}
-
-	a:hover {
-		background-color: #f0f0f0;
-	}
-
-	h2 {
-		margin: 0 0 0.5rem 0;
-	}
-
-	p {
-		margin: 0;
-		color: #666;
-	}
-</style>

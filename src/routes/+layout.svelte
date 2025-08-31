@@ -10,4 +10,15 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<main class="flex min-h-screen w-full flex-col">
+	<header class="w-full bg-gray-800 p-4 text-white">
+		<div class="container mx-auto flex max-w-xl items-center justify-between">
+			<a href="/" class="text-xl font-bold">My Blog</a>
+			<nav>
+				<a href="/" class="mr-4 hover:underline">X</a>
+				<!-- <a href="/blog" class="hover:underline">Blog</a> -->
+			</nav>
+		</div>
+	</header>
+	{@render children?.()}
+</main>
