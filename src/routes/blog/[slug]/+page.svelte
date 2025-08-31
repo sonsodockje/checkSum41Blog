@@ -11,15 +11,15 @@
 	<title>{data.title}</title>
 </svelte:head>
 
-<div class="mx-auto w-xl px-4 py-8">
+<div class="mx-auto w-xl px-4 py-8 text-white">
 	<a href="{base}/blog" class="text-blue-600 hover:underline">&larr; Back to Blog</a>
 
 	<article class="mt-4">
 		<header class="mb-8 text-center">
-			<h1 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+			<h1 class="text-whitemd:text-4xl mb-2 text-3xl font-extrabold tracking-tight">
 				{data.title}
 			</h1>
-			<p class="text-base text-gray-500">Published on {data.date}</p>
+			<p class="text-base text-white">Published on {data.date}</p>
 		</header>
 
 		<div class="prose prose-lg max-w-none">
