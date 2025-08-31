@@ -25,13 +25,4 @@
 </main>
 
 <style>
-	main {
-		background-image:
-			linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			/* 검은색 반투명 오버레이 */ url('/src/lib/assets/bg.jpg'); /* 배경 이미지 */
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
-		z-index: 1; /* 콘텐츠가 위로 올라오도록 설정 */
-	}
 </style>
