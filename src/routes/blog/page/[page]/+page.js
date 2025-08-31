@@ -1,4 +1,4 @@
-import { fetchPosts } from '../../../lib/post-handler';
+import { fetchPosts } from '../../../../lib/post-handler';
 
 export const prerender = true;
 
