@@ -7,7 +7,10 @@ const config = {
 
 	preprocess: [
 		mdsvex({
-			extensions: ['.md']
+			extensions: ['.md'],
+			components: {
+				img: './src/lib/components/Image.svelte'
+			}
 		})
 	],
 
