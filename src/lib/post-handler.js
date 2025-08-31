@@ -15,7 +15,7 @@ export const fetchPosts = async () => {
 	);
 
 	// 'published: false'인 게시물을 필터링합니다.
-	const publishedPosts = allPosts.filter(post => post.meta.published !== false);
+	const publishedPosts = allPosts.filter((post) => post.meta.published !== false);
 
 	return publishedPosts;
 };
