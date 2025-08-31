@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Blog - Page {data.currentPage}</title>
 </svelte:head>
 
 <div class="mx-auto w-xl px-4 py-8">
@@ -30,7 +30,7 @@
 	<div class="mt-12 flex items-center justify-between">
 		{#if data.currentPage > 1}
 			<a
-				href="{base}/blog?page={data.currentPage - 1}"
+				href="{base}/blog/page/{data.currentPage - 1}"
 				class="rounded bg-gray-200 px-4 py-2 text-black hover:bg-gray-300"
 			>
 				&larr; 이전
@@ -46,7 +46,7 @@
 
 		{#if data.currentPage < data.totalPages}
 			<a
-				href="{base}/blog?page={data.currentPage + 1}"
+				href="{base}/blog/page/{data.currentPage + 1}"
 				class="rounded bg-gray-200 px-4 py-2 text-black hover:bg-gray-300"
 			>
 				다음 &rarr;
