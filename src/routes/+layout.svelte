@@ -9,7 +9,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<main class="flex min-h-screen w-full flex-col">
+<main class="flex min-h-screen w-full p-4">
 	<!--
 	<header class="w-full bg-gray-800 p-4 text-white">
 		<div class="container mx-auto flex max-w-xl items-center justify-between">
@@ -26,23 +26,12 @@
 
 <style>
 	main {
-		position: relative;
-		z-index: 1;
-		background-image: url('/src/lib/assets/bg.jpg');
+		background-image:
+			linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			/* 검은색 반투명 오버레이 */ url('/src/lib/assets/bg.jpg'); /* 배경 이미지 */
 		background-size: cover;
 		background-position: center;
 		background-attachment: fixed;
-	}
-
-	main::before {
-		content: '';
-		position: fixed;
-		background-color: black;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		opacity: 0.5;
-		z-index: -1;
+		z-index: 1; /* 콘텐츠가 위로 올라오도록 설정 */
 	}
 </style>

@@ -11,42 +11,30 @@
 	<title>{data.title}</title>
 </svelte:head>
 
-<div class="mx-auto w-xl px-4 py-8 text-white">
-	<a href="{base}/blog" class="text-blue-600 hover:underline">&larr; Back to Blog</a>
+<main class="mx-auto my-2 w-xl text-white">
+	<a href="{base}/blog" class="text-blue-400 hover:underline">&larr; Back to Blog</a>
 
-	<article class="mt-4">
+	<article class="post mt-4">
 		<header class="mb-8 text-center">
-			<h1 class="text-whitemd:text-4xl mb-2 text-3xl font-extrabold tracking-tight">
+			<h1 class="mb-2 text-3xl font-extrabold tracking-tight md:text-4xl">
 				{data.title}
 			</h1>
-			<p class="text-base text-white">Published on {data.date}</p>
+			<p class="text-base text-gray-300">Published on {data.date}</p>
 		</header>
 
-		<div class="prose prose-lg max-w-none">
-			<svelte:component this={data.content} />
-		</div>
+		<svelte:component this={data.content} />
 	</article>
 
-	<hr class="my-12 border-gray-200" />
+	<hr class="my-12 border-gray-600" />
 
 	<!-- <Disqus identifier={data.slug} url={$page.url.href} /> -->
-</div>
+</main>
 
 <style>
-	:global(article h2) {
-		margin-top: 2rem;
-		margin-bottom: 1rem;
-		font-weight: 800;
-	}
-
-	:global(article p) {
-		margin-bottom: 1rem;
-	}
-
-	:global(article img) {
+	:global(.post img) {
 		max-width: 100%;
 		height: auto;
-		border-radius: 8px;
-		margin: 1rem auto 1rem auto;
+		border-radius: 0.5rem;
+		margin: 1rem auto;
 	}
 </style>
