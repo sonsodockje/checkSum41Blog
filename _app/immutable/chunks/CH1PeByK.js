@@ -1,0 +1,1 @@
+import"./DsnmJJEf.js";import"./TDIL4_FB.js";import{f as o,a as e}from"./CfTPOKOb.js";const m={title:"배트맨 2 올빼미도시",date:"2025-08-31",time:"18:53"},{title:f,date:n,time:s}=m;var r=o("<h2>읽습니다.</h2>");function h(t){var a=r();e(t,a)}export{h as default,m as metadata};

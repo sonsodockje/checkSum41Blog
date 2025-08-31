@@ -1,0 +1,1 @@
+import"./DsnmJJEf.js";import"./TDIL4_FB.js";import{f as o,a as e,a2 as p}from"./CfTPOKOb.js";const m={title:"프란츠 카프리썬",date:"2025-08-31",time:"18:52"},{title:f,date:l,time:s}=m;var r=o("<h2>프란츠 카프카</h2> <p>를 아십니까?</p> <p>저는 잘 모르긴 합니다.</p> <blockquote><p>좋은 하루 보내세요.</p></blockquote>",1);function c(t){var a=r();p(6),e(t,a)}export{c as default,m as metadata};
