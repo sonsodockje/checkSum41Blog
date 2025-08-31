@@ -1,5 +1,7 @@
 <script>
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
+	import Disqus from '$lib/components/Disqus.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -17,6 +19,10 @@
 	<div class="content">
 		<svelte:component this={data.content} />
 	</div>
+
+	<hr style="margin-top: 3rem; margin-bottom: 2rem; border: none; height: 1px; background-color: #eeeeee;" />
+
+	<Disqus identifier={data.slug} url={$page.url.href} />
 </div>
 
 <style>

@@ -7,6 +7,7 @@ export async function load({ params }) {
 	return {
 		title,
 		date,
-		content
+		content,
+		slug: params.slug
 	};
 }
