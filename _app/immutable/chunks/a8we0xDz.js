@@ -1,0 +1,1 @@
+import"./DsnmJJEf.js";import"./wz0TDbqS.js";import{w as e,x as o,y as r}from"./B0_sUC5u.js";const m={title:"두 번째 게시물",date:"2025-09-01",time:"11:00",published:!1,category:"카테2"},{title:l,date:n,time:f,published:c,category:h}=m;var i=e("<h2>카테고리 2</h2> <p>이것은 카테고리 2의 게시물입니다.</p>",1);function u(t){var a=i();r(2),o(t,a)}export{u as default,m as metadata};
