@@ -1,11 +1,11 @@
 export const fetchPosts = async () => {
-	const allPostFiles = import.meta.glob('/src/lib/posts/*.md');
+	const allPostFiles = import.meta.glob('/src/lib/posts/**/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
 		iterablePostFiles.map(async ([path, resolver]) => {
 			const { metadata } = await resolver();
-			const postPath = path.slice(15, -3);
+			const postPath = path.split('/src/lib/posts/')[1]?.replace('.md', '');
 
 			return {
 				meta: metadata,
